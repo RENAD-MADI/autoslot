@@ -1,0 +1,105 @@
+﻿@model AutoSlotMVC.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - AutoSlot</title>
+
+    <link rel="stylesheet" href="~/css/style.css" />
+
+</head>
+
+<body>
+
+   
+
+
+
+    <section>
+
+        <h2>Login</h2>
+
+        <p>
+
+            Please enter your email and password
+            to access your account.
+
+        </p>
+
+
+
+        <form asp-action="Login"
+              asp-controller="Home"
+              method="post">
+
+
+            <label>Email:</label>
+
+            <input asp-for="Email"
+                   type="email"
+                   required>
+
+
+
+            <label>Password:</label>
+
+            <input asp-for="Password"
+                   type="password"
+                   required>
+
+
+
+            <input type="submit"
+                   value="Login">
+
+        </form>
+
+
+
+        @if (ViewBag.Message != null)
+        {
+            <p style="color:red;">
+
+                @ViewBag.Message
+
+            </p>
+        }
+
+
+
+        <p>
+
+            Don't have an account?
+
+            <a asp-controller="Home"
+               asp-action="Signup">
+
+                Sign up here
+
+            </a>
+
+        </p>
+
+
+
+    </section>
+
+
+
+   
+
+    <script src="~/js/script.js"></script>
+
+</body>
+
+</html>

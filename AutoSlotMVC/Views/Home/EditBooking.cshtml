@@ -1,0 +1,52 @@
+@model AutoSlotMVC.Models.Booking
+
+@{
+    ViewData["Title"] = "Edit Booking";
+}
+
+<section>
+
+    <h2>Edit Booking</h2>
+
+    <form asp-action="EditBooking"
+          asp-controller="Home"
+          method="post">
+        <div asp-validation-summary="All" class="validation-errors"></div>
+
+
+        <input asp-for="Id" hidden />
+
+        <label>Full Name:</label>
+        <input asp-for="FullName" />
+
+        <label>Phone:</label>
+        <input asp-for="Phone" />
+
+        <label>Car Serial:</label>
+        <input asp-for="CarSerial" />
+
+        <label>Car Model:</label>
+        <input asp-for="CarModel" />
+
+        <label>Service:</label>
+        <input asp-for="ServiceType" />
+
+        <label>Date:</label>
+        <input asp-for="BookingDate"
+               type="date" />
+
+        <label>Time:</label>
+        <input asp-for="BookingTime"
+               type="time" />
+
+        <label>Notes:</label>
+        <textarea asp-for="Notes"></textarea>
+
+        <br /><br />
+
+        <input type="submit"
+               value="Update Booking" />
+
+    </form>
+
+</section>

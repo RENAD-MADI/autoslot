@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <title>Booking - AutoSlot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>AutoSlot</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">SignUp</a>
+            <a href="booking.html">Booking</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+    <section>
+        <h2>Book An Appointment</h2>
+        <p><strong>Note:</strong> You must login or sign up before booking an appointment. </p>
+
+        <p>
+            Select your car service and choose a time that suits you to avoid waiting.
+        </p>
+
+        <form onsubmit="return validateBooking()">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="serial">Car Serial Number (VIN):</label><br>
+            <input type="text" id="serial" name="serial" required><br><br>
+
+            <label for="car">Car Model:</label><br>
+            <input type="text" id="car" name="car" required><br><br>
+
+            <label for="service"> Select Service:</label><br>
+            <select id="service" name="service">
+                <option>Car Wash</option>
+                <option>Oil Change</option>
+                <option>Tire Check</option>
+                <option>Battery Check</option>
+                <option>Brake Inspection</option>
+                <option>Engine Diagnosis</option>
+                <option>AC Service</option>
+                <option>Full Maintenance</option>
+
+            </select><br><br>
+        
+
+            <label for="date">Choose Date:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Choose Time:</label><br>
+            <input type="time" id="time" name="time" required><br><br>
+
+            <label for="notes">Additional Notes:</label><br>
+            <textarea id="notes" name="notes"></textarea><br><br>
+
+            <input type="submit" value="Confirm Booking">
+        </form>
+        <p id="bookingMessage"></p>
+    </section>
+
+    <section>
+        
+        <h3>Service Prices</h3>
+
+        <table border="1">
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+                <th>Duration</th>
+            </tr>
+
+            <tr>
+                <th>Car Wash S  M  L</th>
+                <th>$10  $15  $20</th>
+                <th>30 min</th>
+            </tr>
+
+            <tr>
+                <th>Oil Change</th>
+                <th>$25</th>
+                <th>30 min</th>
+            </tr>
+
+            <tr>
+                <th>Tire Check</th>
+                <th>$12</th>
+                <th>20 min</th>
+            </tr>
+
+            <tr>
+                <th>Battery Check</th>
+                <th>$12</th>
+                <th>15 min</th>
+            </tr>
+        </table>
+        
+
+
+        <h3>Car Wash Details</h3>
+
+            <label>Cleaning Area:</label><br>
+            <input type="radio" name="area"> Outside<br>
+            <input type="radio" name="area"> Inside<br>
+            <input type="radio" name="area"> Both<br><br>
+
+            <label>Car Size:</label><br>
+            <select>
+
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large (SUV)</option>
+            </select><br><br>
+
+            <label>Wash Type:</label><br>
+            <select>
+            <option>Normal Soap</option>
+            <option>Premium Soap +3$</option>
+            <option>Wax +5$</option>
+            <option>Foam Wash</option>
+            </select><br><br>
+            </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 AutoSlot All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

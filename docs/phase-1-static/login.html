@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AutoSlot </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<script src="script.js"></script>
+<body>
+
+        <header>
+            <h1>AutoSlot</h1>  
+        <nav> 
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="booking.html">Booking</a>
+            <a href="about.html">About Us</a>
+        </nav>
+        </header>
+<section>
+    <h2>Login</h2>
+    <p>Please enter your email and password to access your account.</p>
+    <form onsubmit="return validateLogin()">
+
+        <label for="email">Email:</label> <br>  
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="password">Password:</label> <br>
+        <input type= "password" id="password" name="password" required><br>
+        
+        <input type= "submit" value="Login">
+
+    </form>
+
+    <p>
+        Don't have an account? 
+        <a href="signup.html">Sign up here</a>
+    </p>
+</section>
+
+<footer class="footer">
+
+
+<p>&copy; 2026 AutoSlot. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

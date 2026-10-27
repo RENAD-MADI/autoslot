@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> AutoSlot </title>
+
+        <link rel="stylesheet" href=" style.css">
+
+
+    </head>
+    <script src="script.js"></script>
+<body>
+    <header> 
+        <h1> AutoSlot</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">SignUp</a>
+            <a href="booking.html">Booking</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Book your car service in advance</h2>
+
+        <p>Many car wash and maintenance centers become crowded, causing customers
+            to wait for long periods and waste time.
+        </p>
+
+        <p>
+            AutoSlot allows users to book appointments in advance helping them avoid 
+            waiting and get faster service.
+        </p>
+    </section>
+
+    <section>
+    <h3>Our Services</h3>
+
+    <div class="service-images">
+        <img src="images/car-service.jpg" alt="Car Service" usemap="#car-map">
+
+        <a href="about.html">
+            <img src="images/car-wash.jpg" alt="Car Wash">
+        </a>
+    </div>
+
+    <map name="car-map">
+        <area shape="rect" coords="0,0,400,300" href="about.html" alt="About Us">
+    </map>
+</section>
+
+    <section>
+        <h3>Why Choose Us?</h3>
+
+        <ul>
+            <li>Save time and avoid waiting</li>
+            <li>Book appointments easily</li>
+            <li>Choose your service</li>
+            <li>Better organization for car services</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Available Services</h3>
+
+        <table border="1">
+            <tr>
+                 <th>Service</th>
+                 <th>Description</th>
+                 <th>Time</th>
+            </tr>
+
+            <tr>
+                 <td>Car Wash</td>
+                 <td>Full Cleaning</td>
+                 <td>30 min</td>
+            </tr>
+
+            <tr>
+                <td>Oil Change</td>
+                <td>Engine Oil Replacement</td>
+                <td>30 min</td>
+            </tr>
+            
+            <tr>
+                <td>Tire Check</td>
+                <td>Check Tire Condition</td>
+                <td>20 min</td>
+            </tr>
+            <tr>
+                <td>Battery Check</td>
+                <td>Inspect Battery Status</td>
+                <td>15 min</td>
+            </tr>
+
+        </table>
+    </section>
+    <section>
+        <h3>Ready to Book?</h3>
+        <p>Go to the booking page to reserve you time.</p>
+        
+        <a href= "booking.html">Go to Booking</a>
+    </section>
+    
+    <section>
+        <h3>Featured Service</h3>
+        <p id="dynamicText">Click below to see today's recommend service.</p>
+        <button onclick="changeServiceText()">Show Recommended Service</button>
+    </section>
+
+    <section>
+        <h3>Available Services</h3>
+        <p>Click the button to display all available services.</p>
+        <button onclick="showServices()">Show Services</button>
+        <p id="servicesOutput"></p>
+    </section>
+
+    <section>
+        <h3>Service Image</h3>
+        <img id="dynamicImage" src="images/car-service.jpg" alt="Car Service" width="400">
+        <br><br>
+        <button onclick="changeServiceImage()">Change Image</button>
+    </section>
+
+
+    <footer class="footer">
+        <p>© 2026 AutoSlot All Rights Reserved</p>
+</body>
+
+</html>

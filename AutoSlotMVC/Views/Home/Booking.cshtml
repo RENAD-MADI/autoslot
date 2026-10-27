@@ -1,0 +1,182 @@
+@model AutoSlotMVC.Models.Booking
+
+@{
+    ViewData["Title"] = "Booking";
+}
+
+<section>
+
+    <h2>Book An Appointment</h2>
+
+    <p>
+        Select your car service and choose a time that suits you.
+    </p>
+
+    <form asp-action="Booking"
+          asp-controller="Home"
+          method="post">
+        <div asp-validation-summary="All" class="validation-errors"></div>
+
+
+
+        <label>Full Name:</label>
+
+        <input asp-for="FullName"
+               required />
+
+
+
+        <label>Phone Number:</label>
+
+        <input asp-for="Phone"
+               required />
+
+
+
+        <label>Car Serial Number (VIN):</label>
+
+        <input asp-for="CarSerial"
+               required />
+
+
+
+        <label>Car Model:</label>
+
+        <input asp-for="CarModel"
+               required />
+
+
+
+        <label>Select Service:</label>
+
+        <select asp-for="ServiceType">
+
+            <option>Car Wash</option>
+
+            <option>Oil Change</option>
+
+            <option>Tire Check</option>
+
+            <option>Battery Check</option>
+
+            <option>Brake Inspection</option>
+
+            <option>Engine Diagnosis</option>
+
+            <option>AC Service</option>
+
+            <option>Full Maintenance</option>
+
+        </select>
+
+
+
+        <label>Choose Date:</label>
+
+        <input asp-for="BookingDate"
+               type="date"
+               required />
+
+
+
+        <label>Choose Time:</label>
+
+        <input asp-for="BookingTime"
+               type="time"
+               required />
+
+
+
+        <label>Additional Notes:</label>
+
+        <textarea asp-for="Notes"></textarea>
+
+
+
+        <input type="submit"
+               value="Confirm Booking" />
+
+    </form>
+
+
+
+    @if (ViewBag.Message != null)
+    {
+        <p style="color:green;">
+
+            @ViewBag.Message
+
+        </p>
+    }
+
+</section>
+
+
+
+<section>
+
+    <h3>Service Prices</h3>
+
+    <table border="1">
+
+        <tr>
+
+            <th>Service</th>
+
+            <th>Price</th>
+
+            <th>Duration</th>
+
+        </tr>
+
+
+
+        <tr>
+
+            <td>Car Wash</td>
+
+            <td>$10 - $20</td>
+
+            <td>30 min</td>
+
+        </tr>
+
+
+
+        <tr>
+
+            <td>Oil Change</td>
+
+            <td>$25</td>
+
+            <td>30 min</td>
+
+        </tr>
+
+
+
+        <tr>
+
+            <td>Tire Check</td>
+
+            <td>$12</td>
+
+            <td>20 min</td>
+
+        </tr>
+
+
+
+        <tr>
+
+            <td>Battery Check</td>
+
+            <td>$12</td>
+
+            <td>15 min</td>
+
+        </tr>
+
+    </table>
+
+</section>

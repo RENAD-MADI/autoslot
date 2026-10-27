@@ -1,0 +1,87 @@
+@model AutoSlotMVC.Models.User
+
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<section>
+
+    <h2>Create Account</h2>
+
+    <p>
+        Fill in the form below to create a new account.
+    </p>
+
+
+
+    <form asp-action="Signup"
+          asp-controller="Home"
+          method="post"
+          onsubmit="return validateSignup()">
+        <div asp-validation-summary="All" class="validation-errors"></div>
+
+
+
+        <label>Full Name:</label>
+
+        <input asp-for="FullName"
+               id="name"
+               required />
+
+
+
+        <label>Email:</label>
+
+        <input asp-for="Email"
+               id="email"
+               type="email"
+               required />
+
+
+
+        <label>Phone Number:</label>
+
+        <input asp-for="Phone"
+               id="phone"
+               required />
+
+
+
+        <label>Password:</label>
+
+        <input asp-for="Password"
+               id="password"
+               type="password"
+               required />
+
+
+
+        <label>Confirm Password:</label>
+
+        <input type="password"
+               id="confirm"
+               required />
+
+
+
+        <input type="submit"
+               value="Sign Up" />
+
+    </form>
+
+
+
+    <p>
+
+        Already have an account?
+
+        <a asp-controller="Home"
+           asp-action="Login">
+
+            Login here
+
+        </a>
+
+    </p>
+
+</section>

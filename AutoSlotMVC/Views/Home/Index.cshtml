@@ -1,0 +1,169 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<section>
+
+    <h2>Welcome to AutoSlot</h2>
+
+    <p>
+        AutoSlot is a smart car service booking system
+        that helps customers reserve appointments easily
+        and avoid long waiting times.
+    </p>
+
+    <p>
+        Book your car maintenance or car wash service
+        online in just a few simple steps.
+    </p>
+
+</section>
+
+
+
+@if (Context.Session.GetString("UserName") != null)
+{
+    <section>
+
+        <h3>
+
+            Welcome
+            @Context.Session.GetString("UserName")
+
+        </h3>
+
+        @if (Context.Request.Cookies["UserEmail"] != null)
+        {
+            <p>
+
+                Your Email:
+                @Context.Request.Cookies["UserEmail"]
+
+            </p>
+        }
+
+    </section>
+}
+
+
+
+<section>
+
+    <h2>Our Services</h2>
+
+    <div class="service-images">
+
+        <img src="~/images/car-service.jpg"
+             alt="Car Wash" />
+
+        <img src="~/images/car-wash.jpg"
+             alt="Oil Change" />
+
+    </div>
+
+</section>
+
+
+
+<section>
+
+    <h2>Available Services</h2>
+
+    <ul>
+
+        <li>Car Wash</li>
+
+        <li>Oil Change</li>
+
+        <li>Tire Check</li>
+
+        <li>Battery Check</li>
+
+        <li>Brake Inspection</li>
+
+        <li>Engine Diagnosis</li>
+
+        <li>AC Service</li>
+
+        <li>Full Maintenance</li>
+
+    </ul>
+
+</section>
+
+
+
+<section>
+
+    <h2>Why Choose AutoSlot?</h2>
+
+    <ol>
+
+        <li>Easy online booking system</li>
+
+        <li>Reduce waiting time</li>
+
+        <li>Professional maintenance services</li>
+
+        <li>Fast and secure booking process</li>
+
+    </ol>
+
+</section>
+
+
+
+<section>
+
+    <h2>Today's Recommended Service</h2>
+
+    <p id="dynamicText">
+
+        Click the button below to see today's recommended service.
+
+    </p>
+
+    <button onclick="changeServiceText()">
+
+        Show Recommendation
+
+    </button>
+
+</section>
+
+
+
+<section>
+
+    <h2>Our Maintenance Services</h2>
+
+    <button onclick="showServices()">
+
+        Show Services
+
+    </button>
+
+    <p id="servicesOutput"></p>
+
+</section>
+
+
+
+<section>
+
+    <h2>Service Image Preview</h2>
+
+    <img id="dynamicImage"
+         src="~/images/car-service.jpg"
+         width="400"
+         alt="Service Image" />
+
+    <br><br>
+
+    <button onclick="changeServiceImage()">
+
+        Change Image
+
+    </button>
+
+</section>

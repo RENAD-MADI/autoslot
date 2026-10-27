@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - AutoSlotMVC</title>
+
+    <link rel="stylesheet"
+          href="~/css/style.css" />
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>AutoSlot</h1>
+
+        <nav>
+
+            <a asp-controller="Home"
+               asp-action="Index">
+                Home
+            </a>
+
+            <a asp-controller="Home"
+               asp-action="Login">
+                Login
+            </a>
+
+            <a asp-controller="Home"
+               asp-action="Signup">
+                Sign Up
+            </a>
+
+            <a asp-controller="Home"
+               asp-action="Booking">
+                Booking
+            </a>
+
+            <a asp-controller="Home"
+               asp-action="ViewBookings">
+                View Bookings
+            </a>
+
+            <a asp-controller="Home"
+               asp-action="About">
+                About Us
+            </a>
+
+            <a asp-controller="Home"
+               asp-action="Logout">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    @if (Context.Session.GetString("UserName") != null)
+    {
+        <div style="padding:10px;
+                        background:#1e3a5f;
+                        color:white;
+                        text-align:center;">
+
+            Welcome,
+            @Context.Session.GetString("UserName")
+
+        </div>
+    }
+
+
+
+    <div>
+
+        @RenderBody()
+
+    </div>
+
+
+
+    <footer class="footer">
+
+        <p>
+            &copy; 2026 AutoSlot.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <script src="~/js/script.js"></script>
+
+</body>
+
+</html>
